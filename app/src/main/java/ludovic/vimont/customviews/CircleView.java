@@ -12,17 +12,11 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 public class CircleView extends ImageView {
     private int viewWidth, viewHeight;
     private boolean hasABorder = false;
     private int borderWidth = 0, borderColor = 0XDDD1D1D1;
-
-    private boolean timerLaunched = false;
-    private int framesPerSecond = 60, currentOpacity = 255, aimedOpacity;
-    private long animationDuration = 1500, startTime,  elapsedTime;
 
     private Bitmap image;
     private Paint paint, paintBorder;
@@ -53,8 +47,6 @@ public class CircleView extends ImageView {
             this.setLayerType(LAYER_TYPE_SOFTWARE, paintBorder);
             paintBorder.setShadowLayer(4.0f, 0.0f, 2.0f, Color.BLACK);
         }
-
-        aimedOpacity = Math.round(currentOpacity * 0.5f);
     }
 
     public void setBorderColor(int borderColor) {
@@ -75,42 +67,17 @@ public class CircleView extends ImageView {
         loadBitmap();
 
         if (image != null) {
-            launchAnimation();
-            elapsedTime = System.currentTimeMillis() - startTime;
-
             final int circleCenter = viewWidth / 2;
             final int radius = circleCenter - 25;
 
             paint.setShader(computeBitmapShader());
-
-            String colorValue = "#00000000";
-            TextView currentText = (TextView) ((RelativeLayout) getParent()).getChildAt(1);
-
-            if(elapsedTime < animationDuration) {
-                currentOpacity -= aimedOpacity / (animationDuration/30);
-                postInvalidateDelayed(1000 / framesPerSecond);
-                currentText.setVisibility(INVISIBLE);
-                paint.setColor(Color.parseColor(colorValue));
-            } else {
-                paint.setColor(Color.parseColor(colorValue));
-                currentText.setVisibility(VISIBLE);
-            }
-
+            paint.setColor(0x80000000);
             if(hasABorder) {
                 canvas.drawCircle(circleCenter + borderWidth, circleCenter + borderWidth, circleCenter + borderWidth - 4.0f, paintBorder);
             }
             canvas.drawCircle(circleCenter, circleCenter, radius, paint);
         } else {
-            cleanAnimation();
             super.onDraw(canvas);
-        }
-    }
-
-    private void launchAnimation() {
-        if(!timerLaunched) {
-            startTime = System.currentTimeMillis();
-            postInvalidate();
-            timerLaunched = true;
         }
     }
 
@@ -122,14 +89,6 @@ public class CircleView extends ImageView {
         matrix.setRectToRect(drawableRect, viewRect, Matrix.ScaleToFit.CENTER);
         shader.setLocalMatrix(matrix);
         return shader;
-    }
-
-    private void cleanAnimation() {
-        timerLaunched = false;
-        elapsedTime = 0;
-        currentOpacity = 255;
-        paint = new Paint();
-        paint.setAntiAlias(true);
     }
 
     @Override

@@ -1,191 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ludovic.vimont.customviews.MainActivity"
-    android:orientation="vertical"
-    android:background="#66000000">
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#FFFFFF"
-        android:text="Anime List"
-        android:layout_weight="0.15"
-        android:gravity="center_vertical|center_horizontal"
-        android:padding="10dp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.70">
-
-        <android.support.v7.widget.GridLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:grid="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/droparea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            grid:columnCount="2"
-            grid:orientation="horizontal">
-
-            <ludovic.vimont.customviews.SquareRelativeLayout
-                android:id="@+id/relativelayout"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                grid:layout_columnWeight="1"
-                grid:layout_gravity="fill"
-                android:gravity="center_vertical|center_horizontal">
-
-                <ludovic.vimont.customviews.CircleView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clickable="false"
-                    android:textColor="#FFFFFF"
-                    android:text="Ryan Reynolds"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true">
-                </TextView>
-                <ImageButton
-                    android:id="@+id/removeButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:visibility="invisible"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp" />
-            </ludovic.vimont.customviews.SquareRelativeLayout>
-
-            <ludovic.vimont.customviews.SquareRelativeLayout
-                android:id="@+id/relativelayout3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                grid:layout_columnWeight="1"
-                grid:layout_gravity="fill"
-                android:gravity="center_vertical|center_horizontal">
-
-                <ludovic.vimont.customviews.CircleView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clickable="false"
-                    android:textColor="#FFFFFF"
-                    android:text="Ed Skrein"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true">
-                </TextView>
-                <ImageButton
-                    android:id="@+id/removeButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:visibility="invisible"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp" />
-            </ludovic.vimont.customviews.SquareRelativeLayout>
-
-            <ludovic.vimont.customviews.SquareRelativeLayout
-                android:id="@+id/relativelayout4"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                grid:layout_columnWeight="1"
-                grid:layout_gravity="fill"
-                android:gravity="center_vertical|center_horizontal">
-
-                <ludovic.vimont.customviews.CircleView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clickable="false"
-                    android:textColor="#FFFFFF"
-                    android:text="Tom Hardy"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true">
-                </TextView>
-                <ImageButton
-                    android:id="@+id/removeButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:visibility="invisible"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp" />
-            </ludovic.vimont.customviews.SquareRelativeLayout>
-
-            <ludovic.vimont.customviews.SquareRelativeLayout
-                android:id="@+id/relativelayout5"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                grid:layout_columnWeight="1"
-                grid:layout_gravity="fill"
-                android:gravity="center_vertical|center_horizontal">
-
-                <ludovic.vimont.customviews.CircleView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clickable="false"
-                    android:textColor="#FFFFFF"
-                    android:text="Henry Cavill"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true">
-                </TextView>
-                <ImageButton
-                    android:id="@+id/removeButton5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:visibility="invisible"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp" />
-            </ludovic.vimont.customviews.SquareRelativeLayout>
-
-        </android.support.v7.widget.GridLayout>
-    </RelativeLayout>
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.15"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#99000000">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Test"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:text="Anime List"
+            android:layout_weight="0.15"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Test" />
+            <android.support.v7.widget.GridLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:grid="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.75"
+                grid:columnCount="2"
+                grid:orientation="horizontal">
 
+                <ludovic.vimont.customviews.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_rowWeight="1"
+                    grid:layout_gravity="fill"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ludovic.vimont.customviews.CircleView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/code_geass"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Code Geass"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp" />
+                </ludovic.vimont.customviews.SquareRelativeLayout>
+
+                <ludovic.vimont.customviews.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_rowWeight="1"
+                    grid:layout_gravity="fill"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ludovic.vimont.customviews.CircleView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/noragami"
+                        android:scaleType="centerInside"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Noragami"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                    </TextView>
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp" />
+                </ludovic.vimont.customviews.SquareRelativeLayout>
+
+                <ludovic.vimont.customviews.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_rowWeight="1"
+                    grid:layout_gravity="fill"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ludovic.vimont.customviews.CircleView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/steins_gate"
+                        android:scaleType="centerInside" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Stein's Gate"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                    </TextView>
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp" />
+                </ludovic.vimont.customviews.SquareRelativeLayout>
+
+                <ludovic.vimont.customviews.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_rowWeight="1"
+                    grid:layout_gravity="fill"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ludovic.vimont.customviews.CircleView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_lagoon"
+                        android:scaleType="centerInside" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Black Lagoon"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                    </TextView>
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp" />
+                </ludovic.vimont.customviews.SquareRelativeLayout>
+
+            </android.support.v7.widget.GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/twitter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/twitter"
+                android:text="Partager sur Twitter"
+                android:background="#39A6CE"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/googleplus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/googleplus"
+                android:text="Partager sur google+"
+                android:background="#DD4B39"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
