@@ -1,4 +1,4 @@
-package ludovic.vimont.protocinema;
+package ludovic.vimont.customviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
